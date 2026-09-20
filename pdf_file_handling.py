@@ -1,0 +1,9 @@
+import PyPDF2
+
+with open("sample.pdf", "rb") as file:
+    reader = PyPDF2.PdfReader(file)
+
+    for page in reader.pages:
+        print(page.extract_text())
+
+print("PDF Content Displayed Successfully")
